@@ -13,11 +13,18 @@ class Signal {
   }
 
   async run(commands) {
-    console.log(`signal-cli -u ${this.username} ${commands}`)
     const command = await shell.exec(`signal-cli -u ${this.username} ${commands}`, { silent: true });
-    return command;
+    if (command.stdout) {
+      return command.stdout;
+    }
+    if (command.stderr) {
+      return command.stderr;
+    }
+    return;
   }
-  version() { this.run('-v'); }
+  async version() {
+    return await this.run('-v');
+  }
   register() { this.run('register'); }
   verify(verificationCode) { this.run(`verify ${verificationCode}`); }
   send(number, message, group) {
@@ -26,6 +33,12 @@ class Signal {
     } else {
       this.run(`send -m ${message} ${number}`);
     }
+  }
+  async quitGroup(groupNumber){
+    return await this.run(`quitGroup -g ${groupNumber}`);
+  }
+  async listDevices(){
+    return await this.run(`listDevices`);
   }
   async receive() {
     const command = await this.run('receive');
