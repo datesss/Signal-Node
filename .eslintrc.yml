@@ -1,0 +1,12 @@
+extends: airbnb
+plugins:
+  - react
+  - jsx-a11y
+  - import
+rules:
+  react/forbid-prop-types: off
+globals:
+  window: false
+  document: false
+  fetch: false
+  DEV: false
