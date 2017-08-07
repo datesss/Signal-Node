@@ -1,3 +1,5 @@
+![](../master/readme.jpg)
+
 # Signal-Node
 This is a (very) thin wrapper over the Signal-CLI executable, for easier integration with node projects. It is experimental and very not secure.
 
