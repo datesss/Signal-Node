@@ -6,7 +6,8 @@
   "scripts": {
     "babel": "babel src -d pub",
     "watch": "babel src --watch -d pub",
-    "lint": "eslint --ext js --ext jsx src || exit 0"
+    "lint": "eslint --ext js --ext jsx src || exit 0",
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "twilio": "^2.11.1"
   },
   "devDependencies": {
+    "ava": "^0.21.0",
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "eslint": "^3.13.1",
