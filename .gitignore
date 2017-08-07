@@ -3,3 +3,10 @@
 /src/config.js
 /src/test.js
 /.DS_Store
+/dist/config.js
+/dist/dash.js
+/dist/forwardSignalToSMS.js
+/dist/forwardSMStoSignal.js
+/dist/index.js
+/dist/test.js
+/dist/Twilio.js
