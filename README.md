@@ -1,3 +1,5 @@
+![](https://travis-ci.org/datesss/Signal-Node.svg?branch=master)
+
 ![](../master/readme.jpg)
 
 # Signal-Node
