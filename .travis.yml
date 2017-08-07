@@ -1,3 +1,8 @@
 language: node_js
 node_js:
   - "node"
+before_install:
+  - export VERSION=0.5.5
+  - wget https://github.com/AsamK/signal-cli/releases/download/v"${VERSION}"/signal-cli-"${VERSION}".tar.gz
+  - sudo tar xf signal-cli-"${VERSION}".tar.gz -C /opt
+  - sudo ln -sf /opt/signal-cli-"${VERSION}"/bin/signal-cli /usr/local/bin/
